@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'dbt_fundamentals_on_demand'
+name: 'dbt_tutorial_project'
 version: '1.0.0'
 config-version: 2
 
@@ -36,10 +36,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  dbt_fundamentals_on_demand:
+  dbt_tutorial_project:
     # Applies to all files under models/staging/
     staging:
-      +materialized: view
+      jaffle_shop: 
+        +materialized: view
     # Applies to all files under models/marts/
     marts:
-      +materialized: table 
+      marketing:
+        +materialized: table 
